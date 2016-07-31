@@ -1,8 +1,8 @@
 /***************************
 ******游戏中的全局变量******
 ***************************/
-var canvasWidth = innerWidth;//画布的宽
-var canvasHeight = innerHeight;//画布的高
+var canvasWidth = 480;//画布的宽
+var canvasHeight = 850;//画布的高
 
 var score = 0;//当前积分
 var lives = 3;//玩家剩余的命
@@ -245,8 +245,8 @@ function Sky(img){//一张背景图，绘制两份
 	this.x2=0;
 	this.y2=-img.height;
 	this.draw=function(){
-		ctx.drawImage(img,this.x1,this.y1,innerWidth,innerHeight);
-		ctx.drawImage(img,this.x2,this.y2,innerWidth,innerHeight);
+		ctx.drawImage(img,this.x1,this.y1);
+		ctx.drawImage(img,this.x2,this.y2);
 	}
 	this.move=function(){
 		this.y1++;
@@ -471,7 +471,7 @@ function Enemy3(imgs){//大号敌机
 	this.draw = function(){
 		ctx.drawImage(imgs[this.index],this.x,this.y);
 	}
-	this.move = function(){0000000000000000000000
+	this.move = function(){
 		this.y+=3;
 		if(this.y>=canvasHeight){
 			this.removable = true;
